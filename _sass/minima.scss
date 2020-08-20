@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,700;1,300;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display+SC:ital@1&family=Ubuntu+Mono:wght@400;700&display=swap");
 // Define defaults for each variable.
 
-$base-font-family: "Roboto Mono", sans-serif;
-$display-font: "Roboto Mono", sans-serif;
-$code-font: "Roboto Mono", sans-serif;
+$base-font-family: "Montserrat", sans-serif;
+$display-font: "Playfair Display SC", sans-serif;
+$code-font: "Ubuntu Mono", sans-serif;
 $base-font-size: 16px !default;
 $base-font-weight: 400 !default;
 $small-font-size: $base-font-size * 0.875 !default;
@@ -13,7 +13,7 @@ $base-line-height: 1.5 !default;
 $spacing-unit: 30px !default;
 
 $text-color: #111 !default;
-$background-color: #fdfdfd !default;
+$background-color: #e6e3df !default;
 $brand-color: #d85d40 !default;
 
 $grey-color: #adadad !default;

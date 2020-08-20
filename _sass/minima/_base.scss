@@ -127,6 +127,7 @@ a {
   .social-media-list &:hover {
     text-decoration: none;
   }
+  transition: color 0.3s ease-in-out;
 }
 
 /**
@@ -153,7 +154,6 @@ code {
   font-family: $code-font;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: $grey-color-light;
 }
 
 code {

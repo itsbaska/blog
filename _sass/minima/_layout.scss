@@ -190,11 +190,20 @@
 .post-list {
   margin-left: 0;
   list-style: none;
+  a {
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
   .post-link {
-    color: black;
-    font-weight: 700;
-    text-transform: uppercase;
-    @include relative-font-size(2);
+    font-family: $display-font;
+    letter-spacing: 2px;
+    color: $text-color;
+    border-bottom: 1px solid black;
+    transition: color 0.3s ease-in-out;
+    line-height: 1;
+    @include relative-font-size(4);
   }
 
   > li {
@@ -203,7 +212,7 @@
 }
 
 .post-meta {
-  font-family: $code-font;
+  font-family: $base-font-family;
   font-size: $small-font-size;
   color: $grey-color;
 }
@@ -221,13 +230,27 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  font-family: $display-font;
+  letter-spacing: 2px;
+  color: $text-color;
+  border-bottom: 1px solid black;
+  transition: color 0.3s ease-in-out;
   line-height: 1;
-  font-weight: 700;
+  @include relative-font-size(4);
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+}
+
+::-moz-selection {
+  color: $brand-color;
+  background: $text-color;
+}
+
+::selection {
+  color: $brand-color;
+  background: $text-color;
 }
 
 .post-content {
