@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kandinsky Composition Generator"
-date: 2020-09-01 22:34:06 -0500
+date: 2020-09-01 19:04:06 -0500
 categories: p5js generative art
 ---
 
@@ -11,29 +11,33 @@ For those who aren't familiar Kandinsky was a painter and art theorist who was a
 
 Here are some examples of his works that he calls compositions:
 
-![Kandinsky](./assets/kandinsky-composition-1.jpg)
-![Kandinsky](./assets/kandinsky-composition-2.jpg)
+<img src="/assets/2020-09-01-kandinsky-composition-generator/kandinsky-composition-1.jpg" alt="Kandinsky" height="150"/>
+<img src="/assets/2020-09-01-kandinsky-composition-generator/kandinsky-composition-2.jpeg" alt="Kandinsky 2" height="150"/>
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+---
 
-Jekyll requires blog post files to be named according to the following format:
+For this project I used p5.js, css, and just plain old html.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+After setting up a frame, I started off with getting a random background colour. I limited the amount of background colors to tan or grayish colours to emulate what Kandinskys background colour typically looks like.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+```javascript
+var colours = [
+  "#F5EBE1",
+  "#2E346E",
+  "#CB2A15",
+  "EC5F43",
+  "#DB6B12",
+  "#284620",
+  "#352748",
+];
 
-Jekyll also offers powerful support for code snippets:
+function getRandomColour(colours) {
+  return colours[Math.floor(Math.random() * colours.length)];
+}
+```
 
-{% highlight ruby %}
-def print_hi(name)
-puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+The result looks a little something like this:
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+<img src="/assets/2020-09-01-kandinsky-composition-generator/state-gifs/state1.gif" alt="state 1"/>
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+The next step I took was to add a main 
